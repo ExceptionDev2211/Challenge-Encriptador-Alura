@@ -9,18 +9,27 @@
     <script src="app.js"></script>
 </head>
 <body>
-    <header>
-        <img src="imágenes/logo.png" alt="logo de alura">
-    </header>
+   
     <main>
    
         <div class="text">
+            <div class="logo">
+                <img src="imágenes/logo.png" alt="logo de alura">
+            </div>
             <textarea name="message" id="message" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            <p> &#9432; Solo letras minúsculas sin acentos</p>
             <button onclick="encrypt()">Encriptar</button>
             <button onclick="encrypt()">Desencriptar</button>
         </div>
         <div class="encrypt">
-            <textarea name="encrypted" id="encrypted" cols="30" rows="10"></textarea>
+            <div name="encrypted" id="encrypted" cols="30" rows="10">
+                <img src="imágenes/imagen.png" alt="Imágen de persona con una lupa" id="imagenLupa">
+                <p class="encryptParagraph">Ningún mensaje fue encontrado</p>
+                <p class="encryptParagraph2">Ingresa el texto que quieres encriptar o  desencriptar</p>
+                <textarea name="textEncrypted" id="textEncrypted" cols="30" rows="10" style="display: none;" readonly></textarea>
+                <button class="copy" style="display: none;" onclick="copyText()">Copiar</button>
+            </div>
+            
         </div>
     </main>
     <footer>
