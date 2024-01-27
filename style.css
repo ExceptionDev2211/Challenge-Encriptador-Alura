@@ -1,3 +1,82 @@
-div{
-    background: red;
+header{
+    width: 59%;
+    height: 15vh;
+    background-color: #f3f4fd;
+    align-self: baseline;
+}
+header img{
+    height: 70%;
+    margin-left: 3%;
+    margin-top: 1%;
+}
+
+main{
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    background-color: #f3f4fd;
+    
+}
+.text{
+    display: inline-block;
+    width: 59%;
+    margin: none;
+    height: 100%;
+    
+}
+#message::placeholder{
+color: #0a3871;
+}
+#message{
+    margin: 20px auto;
+    display: block;
+    width: 80%;
+    height: 65%;
+    border: none;
+    padding: 20px;
+    font-size:30px;
+    resize: none;
+    background-color: #f3f4fd;
+    
+}
+main button{
+    height: 12%;
+    width: 32%;
+    margin: 2% 8.8%;
+    border-radius: 30px;
+    background-color: #0a3871;
+    cursor: pointer;
+    border-color: #0a3871;
+    color: white;
+    border: 2px solid;
+    font-size: 20px;
+}
+main :nth-child(3){
+    border-radius: 30px;
+    background-color: #d8dee9;   
+    color: #0a3871;
+    border-color: #0a3871;
+
+}
+.encrypt{
+    margin: none;
+    display: inline-block;
+    vertical-align: top;
+    position: static;
+    width: 40%;
+    background-color: aqua;
+    height: 100%;
+    
+    
+}
+#encrypted{
+    margin: 20px auto;
+    width: 80%;
+    display: block;
+
+}
+footer{
+    width: 100%;
+    
+    height: 10vh;
 }
