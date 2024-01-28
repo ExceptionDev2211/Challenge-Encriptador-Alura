@@ -6,7 +6,12 @@ const values = {
     o: 'ober',
     u: 'ufat'
 }
+var anchoPantalla = window.screen.width;
+var altoPantalla = window.screen.height;
 
+// Muestra la resolución en la consola
+console.log('Ancho de la pantalla: ' + anchoPantalla + ' píxeles');
+console.log('Alto de la pantalla: ' + altoPantalla + ' píxeles');
 
 function encrypt() {
     var message = document.getElementById('message').value;
@@ -28,11 +33,50 @@ function encrypt() {
 function decrypt() {
     let encryptedMessage = document.getElementById('message').value;
     let message = '';
+    if (encryptedMessage !== "") {
+        for (let i = 0; i < encryptedMessage.length; i++) {
+            let currentChar = encryptedMessage.charAt(i);
 
-    for (let caracter of encryptedMessage) {
-
+            if (currentChar in values) {
+                switch (currentChar) {
+                    
+                        
+                    case 'a':
+                        message += 'a';
+                        i += 1;
+                        break;
+                    case 'e':
+                        message += 'e';
+                        i += 4;
+                        break;
+                    case 'i':
+                        message += 'i';
+                        i += 3;
+                        break;
+                    case 'o':
+                        message += 'o';
+                        i += 3;
+                        break;
+                    case 'u':
+                        message += 'u';
+                        i += 3;
+                        break;
+                    default:
+                        
+                        break;
+                }
+            } else {
+                message += currentChar;
+            }
+        }
+        console.log(message)
+        var encryptedArea = document.getElementById('textEncrypted');
+        encryptedArea.value = message;
+        showText();
     }
+
 }
+
 function showText() {
     let image = document.querySelector('#imagenLupa');
     let paragraph = document.querySelector('.encryptParagraph');

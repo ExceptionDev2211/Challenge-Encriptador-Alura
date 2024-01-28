@@ -5,9 +5,9 @@
     align-self: baseline;
 }
 .logo img{
-    height: 70%;
-    margin-left: 3%;
-    margin-top: 1%;
+    height: 60%;
+    margin-left: 5%;
+    margin-top: 3%;
 }
 
 main{
@@ -126,15 +126,401 @@ main :nth-child(5){
 }
 .copy{
     width: 80%;
-    background-color: white;
+    background-color: white !important;
+    
 
 }
 footer{
     width: 100%;
     height: 4vh;
     background: #f3f4fd;
+    
 }
 footer p {
-    display: inline;
+    display: inline block;
+    text-align: center;
+    font-size: 12px;
+}
+@media screen and (min-width: 1900px){
+    main button{
+        height: 7%;
+    }
+}
+@media screen and (max-width: 1024px){
+    main button{
+        height: 8%;
+    }
+    .logo{
+        width: 100%;
+        height: 6vh;
+    }
+    main{
+        display: block;
+    }
 
+    .text{
+        width: 100%;
+        height: 70vh;
+        
+    }
+    #message{
+        height: 70%;
+    }
+    .encrypt{
+        width: 100%;
+        height: 20vh;
+        
+    }
+    #encrypted img{
+        display: none;
+    }
+    #textEncrypted{
+        height: 70%;
+        
+    }
+    .copy{
+        height: 20%;
+    }
+}
+@media screen and (max-width: 1024px) and (max-height: 600px){
+    main button{
+        height: 15%;
+    }
+    .logo{
+        width: 100%;
+        height: 6vh;
+    }
+    main{
+        display: block;
+    }
+
+    .text{
+        width: 100%;
+        height:65vh;
+        
+    }
+    #message{
+        height: 50%;
+    }
+    .encrypt{
+        width: 100%;
+        height: 20vh;
+        
+        
+    }
+    #encrypted img{
+        display: none;
+    }
+    #textEncrypted{
+        height: 70%;
+        
+    }
+    .copy{
+        height: 25%;
+    }
+    footer{
+        height: 10vh;
+        
+    }
+}
+@media screen and (max-width: 540px){
+    main button{
+        height: 8%;
+    }
+    .logo{
+        width: 100%;
+        height: 6vh;
+    }
+    main{
+        display: block;
+    }
+
+    .text{
+        width: 100%;
+        height: 70vh;
+        
+    }
+    #message{
+        height: 60%;
+    }
+    .encrypt{
+        width: 100%;
+        height: 15vh;
+        
+    }
+    #encrypted img{
+        display: none;
+    }
+    #textEncrypted{
+        height: 65%;
+        
+    }
+    .copy{
+        height: 30%;
+    }
+    footer{
+        height: 10vh;
+    }
+}
+@media screen and (max-width: 430px){
+    main button{
+        display: block;
+        height: 8%;
+        width: 80%;
+        margin: 4px auto;
+    }
+    .logo{
+        width: 100%;
+        height: 5vh;
+    }
+    main{
+        display: block;
+    }
+
+    .text{
+        width: 100%;
+        height: 70vh;
+        
+    }
+    #message{
+        height: 70%;
+    }
+    .encrypt{
+        width: 100%;
+        height: 20vh;
+        margin-top: 2%;
+        
+    }
+    #encrypted{
+        height: 60%;
+        
+    }
+    #encrypted img{
+        display: none;
+    }
+    #textEncrypted{
+        height: 70%;
+        
+    }
+    .copy{
+        height: 30%;
+        width: 97%;
+        margin: 2px auto;
+    }
+}
+@media screen and (max-width: 390px){
+    main button{
+        display: block;
+        height: 9%;
+        width: 80%;
+        margin: 4px auto;
+        font-size: 15px;
+    }
+    .logo{
+        width: 100%;
+        height: 5vh;
+    }
+    main{
+        display: block;
+    }
+
+    .text{
+        width: 100%;
+        height: 70vh;
+        
+        
+    }
+    #message{
+        height: 60%;
+        font-size: 20px;
+    }
+    .encrypt{
+        width: 100%;
+        height: 20vh;
+        
+        
+        
+        
+    }
+    #encrypted{
+        height: 70%;
+        
+        
+    }
+    #encrypted img{
+        display: none;
+    }
+    #textEncrypted{
+        height: 70%;
+        font-size: 15px;
+        
+    }
+    #encrypted :nth-child(2){
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 17px;
+        font-weight: bold;
+        margin: 1% auto;
+        color: #052051;
+        text-align: center; 
+    }
+    #encrypted :nth-child(3){
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        margin: 1% auto; 
+        color: gray;
+        text-align: center;
+    }
+    .copy{
+        height: 30%;
+        width: 97%;
+        margin: 2px auto;
+    }
+    footer{
+        height: 13vh;
+        
+    }
+}
+@media screen and (max-width: 375px){
+    main button{
+        display: block;
+        height: 9%;
+        width: 80%;
+        margin: 4px auto;
+        font-size: 15px;
+    }
+    .logo{
+        width: 100%;
+        height: 5vh;
+    }
+    main{
+        display: block;
+    }
+
+    .text{
+        width: 100%;
+        height: 70vh;
+        
+        
+    }
+    #message{
+        height: 55%;
+        font-size: 20px;
+    }
+    .encrypt{
+        width: 100%;
+        height: 20vh;
+        
+        
+        
+        
+    }
+    #encrypted{
+        height: 70%;
+        
+        
+    }
+    #encrypted img{
+        display: none;
+    }
+    #textEncrypted{
+        height: 70%;
+        font-size: 15px;
+        
+    }
+    #encrypted :nth-child(2){
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 17px;
+        font-weight: bold;
+        margin: 1% auto;
+        color: #052051;
+        text-align: center; 
+    }
+    #encrypted :nth-child(3){
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        margin: 1% auto; 
+        color: gray;
+        text-align: center;
+    }
+    .copy{
+        height: 30%;
+        width: 97%;
+        margin: 2px auto;
+    }
+    footer{
+        height: 13vh;
+        
+    }
+}
+@media screen and (max-width: 280px){
+    main button{
+        display: block;
+        height: 9%;
+        width: 80%;
+        margin: 4px auto;
+        font-size: 15px;
+    }
+    .logo{
+        width: 100%;
+        height: 5vh;
+    }
+    main{
+        display: block;
+    }
+
+    .text{
+        width: 100%;
+        height: 70vh;
+        
+        
+    }
+    #message{
+        height: 50%;
+        font-size: 20px;
+    }
+    .encrypt{
+        width: 100%;
+        height: 20vh;
+        
+        
+        
+        
+    }
+    #encrypted{
+        height: 70%;
+        
+        
+    }
+    #encrypted img{
+        display: none;
+    }
+    #textEncrypted{
+        height: 70%;
+        font-size: 15px;
+        
+    }
+    #encrypted :nth-child(2){
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 17px;
+        font-weight: bold;
+        margin: 1% auto;
+        color: #052051;
+        text-align: center; 
+    }
+    #encrypted :nth-child(3){
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        margin: 1% auto; 
+        color: gray;
+        text-align: center;
+    }
+    .copy{
+        height: 30%;
+        width: 97%;
+        margin: 2px auto;
+    }
+    footer{
+        height: 13vh;
+        
+    }
 }
