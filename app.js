@@ -1,25 +1,20 @@
 
-const values = {
+const code = {
     a: 'ai',
     e: 'enter',
     i: 'imes',
     o: 'ober',
     u: 'ufat'
 }
-var anchoPantalla = window.screen.width;
-var altoPantalla = window.screen.height;
-
-// Muestra la resolución en la consola
-console.log('Ancho de la pantalla: ' + anchoPantalla + ' píxeles');
-console.log('Alto de la pantalla: ' + altoPantalla + ' píxeles');
 
 function encrypt() {
-    var message = document.getElementById('message').value;
-    var encryptedMessage = "";
-    if (message != "") {
+    let message = document.getElementById('message').value;
+    let encryptedMessage = "";
+    
+    if (message != ""  && validateCharacters(message)) {
         for (var character of message) {
-            if (character in values) {
-                encryptedMessage = encryptedMessage.concat(values[character]);
+            if (character in code) {
+                encryptedMessage = encryptedMessage.concat(code[character]);
             } else {
                 encryptedMessage = encryptedMessage.concat(character);
             }
@@ -33,11 +28,11 @@ function encrypt() {
 function decrypt() {
     let encryptedMessage = document.getElementById('message').value;
     let message = '';
-    if (encryptedMessage !== "") {
+    if (encryptedMessage !== "" && validateCharacters(encryptedMessage)) {
         for (let i = 0; i < encryptedMessage.length; i++) {
             let currentChar = encryptedMessage.charAt(i);
 
-            if (currentChar in values) {
+            if (currentChar in code) {
                 switch (currentChar) {
                     
                         
@@ -76,6 +71,24 @@ function decrypt() {
     }
 
 }
+function validateCharacters(message) {
+    let i = 0;
+    let validate = true;
+
+    while (validate && i < message.length) {
+        if ((message.charCodeAt(i) >= 97 && message.charCodeAt(i) <= 122) ||  message.charCodeAt(i) == 32) {
+            console.log(message.charCodeAt(i));
+            i++;
+            
+        } else {
+            validate = false;
+            alert("Solo letras minúsculas sin caracteres especiales");
+        }
+    }
+
+    return validate;
+}
+
 
 function showText() {
     let image = document.querySelector('#imagenLupa');
@@ -98,7 +111,7 @@ function copyText() {
         text.select();
         navigator.clipboard.writeText(text.value)
             .then(() => {
-                alert('¡Texto copiado al portapapeles!');
+                alert('Texto copiado al portapapeles');
             })
             .catch(err => {
                 alert('Error al intentar copiar el texto: ' + err);
